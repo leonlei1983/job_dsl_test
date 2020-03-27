@@ -1,4 +1,4 @@
-def migration = "${lei_migration}".toBoolean();
+def migration = "${LEI_MIGRATION}".toBoolean();
 
 this.pipelineJob('example') {
     environmentVariables {
