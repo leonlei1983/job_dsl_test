@@ -4,7 +4,7 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
         disableConcurrentBuilds()
     }
-    environment {
+    properties {
         lei_migration = "${env.LEI_MIGRATION ?: 'false'}";
     }
     stages {
