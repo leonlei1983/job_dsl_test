@@ -3,13 +3,13 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
         disableConcurrentBuilds()
-        parameters([
-            Boolean(name: 'lei_migration', defaultValue: false)
-        ])
     }
     stages {
         stage('Test jobDsl') {
             steps {
+                script {
+                    def lei_migration = "${env.lei_migration ?: 'false'}"
+                }
                 jobDsl targets: 'test.groovy',
                    removedJobAction: 'DELETE',
                    removedViewAction: 'DELETE'
