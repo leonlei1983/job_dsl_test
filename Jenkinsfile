@@ -3,8 +3,6 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
         disableConcurrentBuilds()
-    }
-    properties {
         parameters([
             Boolean(name: 'lei_migration', defaultValue: false)
         ])
