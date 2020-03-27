@@ -1,6 +1,4 @@
-
-def env = "${env.LEI_ENV}".toLowerCase();
-def migration = "${env.LEI_MIGRATION ?: 'false'}".toBoolean();
+def migration = "${lei_migration}".toBoolean();
 
 this.pipelineJob('example') {
     environmentVariables {
