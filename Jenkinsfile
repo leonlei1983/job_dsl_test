@@ -6,7 +6,7 @@ pipeline {
     }
     properties {
         parameters([
-            boolean(name: 'lei_migration', defaultValue: false)
+            Boolean(name: 'lei_migration', defaultValue: false)
         ])
     }
     stages {
