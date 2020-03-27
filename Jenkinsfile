@@ -5,7 +5,9 @@ pipeline {
         disableConcurrentBuilds()
     }
     properties {
-        lei_migration = "${env.LEI_MIGRATION ?: 'false'}";
+        parameters([
+            boolean(name: 'lei_migration', defaultValue: false)
+        ])
     }
     stages {
         stage('Test jobDsl') {
