@@ -1,4 +1,4 @@
-import common
+import PipeJob
 
 class Example2 {
     static def run(factory) {
