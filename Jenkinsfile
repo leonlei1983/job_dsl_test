@@ -4,6 +4,9 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '30'))
         disableConcurrentBuilds()
     }
+    parameters {
+        booleanParam(name: 'job_enable', defaultValue: "${env.job_enable ?: true}")
+    }
     stages {
         stage('Test jobDsl') {
             steps {

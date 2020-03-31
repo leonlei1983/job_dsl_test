@@ -9,7 +9,7 @@ class Example {
         }
 
         pipeJobGen("example") {
-            if (job_enable) {
+            if (!job_enable) {
                 disable()
             }
         }
