@@ -2,7 +2,7 @@ def migration = "${LEI_MIGRATION}".toBoolean();
 
 this.pipelineJob('example') {
     environmentVariables {
-
+        ['env': 'staging', 'mode': 'jenkins']
     }
     // parameters {
 
