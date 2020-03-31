@@ -9,10 +9,10 @@ this.pipelineJob('example') {
     // }
     properties {
         disableConcurrentBuilds()
-    }
-    pipelineTriggers {
-        triggers {
-            githubPush()
+        pipelineTriggers {
+            triggers {
+                githubPush()
+            }
         }
     }
     // triggers {
