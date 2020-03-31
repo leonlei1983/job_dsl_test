@@ -2,7 +2,7 @@ def migration = "${LEI_MIGRATION}".toBoolean();
 
 this.pipelineJob('example') {
     environmentVariables {
-        ['env': 'staging', 'mode': 'jenkins']
+        envs(['env': 'staging', 'mode': 'jenkins'])
     }
     // parameters {
 
@@ -10,8 +10,10 @@ this.pipelineJob('example') {
     properties {
         disableConcurrentBuilds()
     }
-    triggers {
-        githubPush()
+    pipelineTriggers {
+        triggers {
+            githubPush()
+        }
     }
     // triggers {
     //     upstream(pipeline.upstream)
