@@ -52,7 +52,7 @@ def pipeJobGen = {name, closure ->
 }
 
 pipeJobGen("example") {
-    disable
+    disable()
 }
 pipeJobGen("example2") {}
 
