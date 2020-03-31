@@ -2,10 +2,10 @@ package io.ex
 
 import io.common.PipeJob
 
-def job_enable = "${job_enable}".toBoolean()
-
 class Example {
     static def run(factory) {
+        def job_enable = "${job_enable}".toBoolean()
+        
         def pipeJobGen = {name, closure ->
             PipeJob.run factory, name, closure 
         }
