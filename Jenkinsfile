@@ -13,7 +13,10 @@ pipeline {
                     removedJobAction: 'DISABLE',
                     removedViewAction: 'DELETE',
                     sandbox: true,
-                    unstableOnDeprecation: true
+                    unstableOnDeprecation: true,
+                    additionalParameters: [
+                        job_enable: "${env.job_enable ?: 'true'}"
+                    ]
             }
         }
     }

@@ -9,7 +9,7 @@ class Example {
         }
 
         pipeJobGen("example") {
-            if (env.open) {
+            if (env.job_enable) {
                 disable()
             }
         }
