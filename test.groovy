@@ -4,18 +4,21 @@ this.pipelineJob('example') {
     environmentVariables {
 
     }
-    parameters {
+    // parameters {
 
-    }
+    // }
     properties {
-
+        disableConcurrentBuilds()
     }
     triggers {
-
+        githubPush()
     }
-    throttleConcurrentBuilds {
-
+    triggers {
+        upstream(pipeline.upstream)
     }
+    // throttleConcurrentBuilds {
+
+    // }
     logRotator {
         numToKeep(30)
     }
