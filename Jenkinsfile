@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Test jobDsl') {
             steps {
-                jobDsl targets: 'test.groovy',
+                jobDsl targets: 'seed.groovy',
                    removedJobAction: 'DELETE',
                    removedViewAction: 'DELETE'
             }

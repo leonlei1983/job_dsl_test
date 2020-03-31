@@ -52,15 +52,3 @@ class PipeJob {
         }
     }
 }
-
-def pipeJobGen = {name, closure ->
-    PipeJob.run this, name, closure 
-}
-
-pipeJobGen("example") {
-    if (env.open) {
-        disable()
-    }
-}
-pipeJobGen("example2") {}
-
