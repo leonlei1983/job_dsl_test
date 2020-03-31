@@ -5,7 +5,7 @@ pipeline {
         disableConcurrentBuilds()
     }
     parameters {
-        booleanParam(name: 'job_enable', defaultValue: "${env.job_enable ?: true}")
+        booleanParam(name: 'job_enable', defaultValue: "${env.job_enable ?: true}", description: '')
     }
     stages {
         stage('Test jobDsl') {
