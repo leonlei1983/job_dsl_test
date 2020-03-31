@@ -13,9 +13,9 @@ this.pipelineJob('example') {
     triggers {
         githubPush()
     }
-    triggers {
-        upstream(pipeline.upstream)
-    }
+    // triggers {
+    //     upstream(pipeline.upstream)
+    // }
     // throttleConcurrentBuilds {
 
     // }
