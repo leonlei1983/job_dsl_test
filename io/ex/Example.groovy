@@ -1,4 +1,6 @@
-import PipeJob
+package io.ex
+
+import io.common.PipeJob
 
 class Example {
     static def run(factory) {

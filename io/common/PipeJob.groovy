@@ -1,3 +1,5 @@
+package io.common
+
 class PipeJob {
     boolean disable
 
