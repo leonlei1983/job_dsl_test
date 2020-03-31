@@ -20,9 +20,11 @@ class PipeJob {
             environmentVariables {
                 envs(['env': 'staging', 'mode': 'jenkins'])
             }
-            // parameters {
 
-            // }
+            parameters {
+                booleanParam "open", false
+            }
+
             properties {
                 disableConcurrentBuilds()
                 pipelineTriggers {
@@ -31,15 +33,19 @@ class PipeJob {
                     }
                 }
             }
+
             // triggers {
             //     upstream(pipeline.upstream)
             // }
+
             // throttleConcurrentBuilds {
 
             // }
+
             logRotator {
                 numToKeep(30)
             }
+
             if (job.disable) {
                 disabled()
             }
@@ -52,7 +58,9 @@ def pipeJobGen = {name, closure ->
 }
 
 pipeJobGen("example") {
-    disable()
+    if (env.open) {
+        disable()
+    }
 }
 pipeJobGen("example2") {}
 
