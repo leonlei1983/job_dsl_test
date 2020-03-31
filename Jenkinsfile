@@ -8,8 +8,12 @@ pipeline {
         stage('Test jobDsl') {
             steps {
                 jobDsl targets: 'seed.groovy',
-                   removedJobAction: 'DELETE',
-                   removedViewAction: 'DELETE'
+                    failOnMissingPlugin: true,
+                    removedConfigFilesAction: 'DELETE',
+                    removedJobAction: 'DISABLE',
+                    removedViewAction: 'DELETE',
+                    sandbox: true,
+                    unstableOnDeprecation: true
             }
         }
     }
