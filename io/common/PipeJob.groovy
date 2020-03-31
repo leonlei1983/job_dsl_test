@@ -23,9 +23,9 @@ class PipeJob {
                 envs(['env': 'staging', 'mode': 'jenkins'])
             }
 
-            parameters {
-                booleanParam "open", false
-            }
+            // parameters {
+            //     booleanParam "open", false
+            // }
 
             properties {
                 disableConcurrentBuilds()
