@@ -9,9 +9,7 @@ class Example {
         }
 
         pipeJobGen("example") {
-            if (LEI_MIGRATION == 'false' || job_enable == false) {
-                disable()
-            }
+            disable()
         }
     }
 }
