@@ -30,9 +30,9 @@ class PipeJob {
             properties {
                 disableConcurrentBuilds()
                 pipelineTriggers {
-                    triggers {
-                        githubPush()
-                    }
+                    // triggers {
+                    //     githubPush()
+                    // }
                 }
             }
 
