@@ -74,7 +74,7 @@ class PipeJob {
                             adminlist('')
                             whitelist('')
                             orgslist('')
-                            // cron('H/5 * * * *')
+                            cron('H/5 * * * *')
                             triggerPhrase('')
                             onlyTriggerPhrase(false)
                             autoCloseFailedPullRequests(false)
