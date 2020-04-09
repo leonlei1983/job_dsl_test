@@ -33,8 +33,8 @@ class PipeJob {
                     scm {
                         git {
                             remote {
-                                github("leonlei1983/jenkins_pipeline_test", 'ssh')
-                                credentials('leonlei1983')
+                                github("leonlei1983/jenkins_pipeline_test", 'https')
+                                // credentials('leonlei1983')
                                 refspec('+refs/pull/${ghprbPullId}/*:refs/remotes/origin/pr/${ghprbPullId}/*')
                             }
                             branch('refs/heads/master')
