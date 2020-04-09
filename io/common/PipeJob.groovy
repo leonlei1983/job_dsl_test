@@ -33,8 +33,8 @@ class PipeJob {
                     scm {
                         git {
                             remote {
-                                github("Gogolook-Inc/${pipeline.github.repo}", 'ssh')
-                                // credentials('serverdeploy_key')
+                                github("leonlei1983/jenkins_pipeline_test", 'ssh')
+                                credentials('leonlei1983')
                                 refspec('+refs/pull/${ghprbPullId}/*:refs/remotes/origin/pr/${ghprbPullId}/*')
                             }
                             branch('refs/heads/master')
