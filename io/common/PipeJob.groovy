@@ -48,7 +48,7 @@ class PipeJob {
                                 sparseCheckoutPaths {
                                     sparseCheckoutPaths {
                                         sparseCheckoutPath {
-                                            path(pipeline.defs.scriptFolder)
+                                            path('aaa')
                                         }
                                     }
                                 }
@@ -58,7 +58,7 @@ class PipeJob {
                             }
                         }
                     }
-                    scriptPath('aaa')
+                    scriptPath('aaa/Jenkins')
                 }
             }
 
