@@ -58,7 +58,7 @@ class PipeJob {
                             }
                         }
                     }
-                    scriptPath('aaa/Jenkins')
+                    scriptPath('aaa/Jenkinsfile')
                 }
             }
 
