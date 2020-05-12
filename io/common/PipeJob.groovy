@@ -92,6 +92,7 @@ class PipeJob {
                             whiteListLabels('')
                             excludedRegions('')
                             includedRegions("^aaa/.*")
+                        }
 
                         if (name == "example") {
                             triggers {
