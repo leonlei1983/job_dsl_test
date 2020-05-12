@@ -95,14 +95,15 @@ class PipeJob {
                             excludedRegions('')
                             includedRegions("^aaa/.*")
                         }
+
+                        upstream("example2")
                     }
 
-                    if (name == "example") {
-                        triggers {
-                            // upstream("example2")
-                            upstreamBuild("example2")
-                        }
-                    }
+                    // if (name == "example") {
+                    //     triggers {
+                    //         upstream("example2")
+                    //     }
+                    // }
                 }
             }
 
