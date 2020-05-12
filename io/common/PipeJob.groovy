@@ -98,7 +98,9 @@ class PipeJob {
                     }
 
                     if (name == "example") {
-                        upstream("example2")
+                        triggers {
+                            upstream("example2")
+                        }
                     }
                 }
             }
