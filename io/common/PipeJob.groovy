@@ -110,6 +110,11 @@ class PipeJob {
             // triggers {
             //     upstream(pipeline.upstream)
             // }
+            if (name == "example") {
+                triggers {
+                    upstream("example2")
+                }
+            }
 
             // throttleConcurrentBuilds {
 
