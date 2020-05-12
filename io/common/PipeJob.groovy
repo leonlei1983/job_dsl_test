@@ -66,7 +66,10 @@ class PipeJob {
                 disableConcurrentBuilds()
                 pipelineTriggers {
                     triggers {
-                        // githubPush()
+                        githubPush()
+                    }
+
+                    triggers {
                         ghprbTrigger {
                             useGitHubHooks(true)
                             permitAll(true)
