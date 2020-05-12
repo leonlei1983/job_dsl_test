@@ -99,7 +99,7 @@ class PipeJob {
 
                     triggers {
                         if (name == "example") {
-                            upstream("example2", "STABLE")
+                            upstream("example2", "SUCCESS")
                         }
                     }
                 }
