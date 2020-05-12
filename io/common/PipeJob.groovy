@@ -96,6 +96,12 @@ class PipeJob {
                             includedRegions("^aaa/.*")
                         }
                     }
+
+                    if (name == "example") {
+                        triggers {
+                            upstream("example2")
+                        }
+                    }
                 }
             }
 
