@@ -98,10 +98,7 @@ class PipeJob {
                     }
 
                     if (name == "example") {
-                        upstream(
-                          threshold: 'SUCCESS',
-                          upstreamProjects: 'example2'
-                        )
+                        upstream("example2")
                     }
                 }
             }
