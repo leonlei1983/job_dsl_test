@@ -67,7 +67,9 @@ class PipeJob {
                 pipelineTriggers {
                     triggers {
                         githubPush()
+                    }
 
+                    triggers {
                         ghprbTrigger {
                             useGitHubHooks(true)
                             permitAll(true)
@@ -93,7 +95,9 @@ class PipeJob {
                             excludedRegions('')
                             includedRegions("^aaa/.*")
                         }
+                    }
 
+                    triggers {
                         if (name == "example") {
                             upstream("example2")
                         }
