@@ -96,7 +96,7 @@ class PipeJob {
                             includedRegions("^aaa/.*")
                         }
 
-                        upstream("example2")
+                        // upstream("example2")
                     }
 
                     // if (name == "example") {
