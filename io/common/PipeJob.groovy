@@ -67,9 +67,7 @@ class PipeJob {
                 pipelineTriggers {
                     triggers {
                         githubPush()
-                    }
 
-                    triggers {
                         ghprbTrigger {
                             useGitHubHooks(true)
                             permitAll(true)
@@ -94,27 +92,24 @@ class PipeJob {
                             whiteListLabels('')
                             excludedRegions('')
                             includedRegions("^aaa/.*")
+
+                        if (name == "example") {
+                            triggers {
+                                upstream("example2")
+                            }
                         }
-
-                        // upstream("example2")
                     }
-
-                    // if (name == "example") {
-                    //     triggers {
-                    //         upstream("example2")
-                    //     }
-                    // }
                 }
             }
 
             // triggers {
             //     upstream(pipeline.upstream)
             // }
-            if (name == "example") {
-                triggers {
-                    upstream("example2")
-                }
-            }
+            // if (name == "example") {
+            //     triggers {
+            //         upstream("example2")
+            //     }
+            // }
 
             // throttleConcurrentBuilds {
 
